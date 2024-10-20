@@ -52,8 +52,7 @@ FROM station_in_out io JOIN stations s ON io.stacode = s.stationcode
 WHERE(stacode,gateincomingcnt) IN (SELECT stacode,MAX(gateincomingcnt)
 FROM station_in_out
 GROUP BY stacode)
-ORDER BY gateincomingcnt DESC;
-
+ORDER BY gateincomingcnt DESC ;
 
 
 
